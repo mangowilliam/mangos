@@ -1,4 +1,3 @@
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -114,5 +113,3 @@ virt/
 
 # mypy
 .mypy_cache/
-
-
