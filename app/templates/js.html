@@ -11,87 +11,61 @@
           &lt;/script&gt; </li>
         <li class="list-group-item list-group-item-secondary">Call an External JavaScript File </li>
         <li class="list-group-item">&lt;script src="name.js"&gt;&lt;/script&gt;</li>
-        <li class="list-group-item list-group-item-secondary">Including Comments  </li>
+        <li class="list-group-item list-group-item-secondary">Including Comments </li>
         <li class="list-group-item">Single line comments - // </li>
-        <li class="list-group-item">Multi-line comments - /* comment here */  </li>
+        <li class="list-group-item">Multi-line comments - /* comment here */ </li>
     </div>
   </div>
-  <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="list-group">
-              <li class="list-group-item active">JAVASCRIPT BASICS </li>
-              <li class="list-group-item list-group-item-secondary">Including JavaScript in an HTML Page </li>
-              <li class="list-group-item">&lt;script type="text/javascript"&gt; <br>
-                //JS code goes here <br>
-                &lt;/script&gt; </li>
-              <li class="list-group-item list-group-item-secondary">Call an External JavaScript File </li>
-              <li class="list-group-item">&lt;script src="name.js"&gt;&lt;/script&gt;</li>
-              <li class="list-group-item list-group-item-secondary">Including Comments  </li>
-              <li class="list-group-item">Single line comments - // </li>
-              <li class="list-group-item">Multi-line comments - /* comment here */  </li>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div class="row">
-    <ul class="list-group">
-      <li class="list-group-item active">Array Methods</li>
-      <li class="list-group-item">concat() — Join several arrays into one</li>
-      <li class="list-group-item">indexOf() — Returns the first position at which a given element appears in an
-        array
-      </li>
-      <li class="list-group-item">join() — Combine elements of an array into a single string and return the string
-      </li>
-      <li class="list-group-item">lastIndexOf() — Gives the last position at which a given element appears in an array
-      </li>
-      <li class="list-group-item">toString() — Converts elements to strings
-      </li>
-      <li class="list-group-item">shift() — Remove the first element of an array</li>
-      <li class="list-group-item"> sort() — Sorts elements alphabetically</li>
-      <li class="list-group-item">unshift() —Adds a new element to the beginning</li>
-      <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
-      <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
-      <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
-      <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
-    </ul>
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">VARIABLES IN JAVASCRIPT </li>
+        <li class="list-group-item list-group-item-secondary">var, const, let </li>
+        <li class="list-group-item">var — The most common variable. Can be reassigned but only accessed
+          within a function. Variables defined with var move to the top when
+          code is executed.</li>
+        <li class="list-group-item">const — Can not be reassigned and not accessible before they appear
+          within the code. </li>
+        <li class="list-group-item">let — Similar to const, however, let variable can be reassigned but
+          not re-declared. </li>
+        <li class="list-group-item list-group-item-secondary">Data Types </li>
+        <li class="list-group-item">Numbers — var age = 3 </li>
+        <li class="list-group-item">Variables — var y </li>
+        <li class="list-group-item">Text (strings) — var a = "init" </li>
+        <li class="list-group-item">Operations — var b = 1 + 2 + 3 </li>
+        <li class="list-group-item">True or fase statements — var y = true </li>
+        <li class="list-group-item">Constant numbers — const PI = 3.14 </li>
+        <li class="list-group-item">Objects — var name = {firstName:"John", lastName:”Doe"} </li>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">ARRAYS</li>
+        <li class="list-group-item"> var fruit = ["Banana", "Apple", "Pear"]; </li>
+        <li class="list-group-item list-group-item-secondary">Array Methods </li>
+        <li class="list-group-item">concat() — Join several arrays into one</li>
+        <li class="list-group-item">indexOf() — Returns the first position at which a given element appears in an
+          array
+        </li>
+        <li class="list-group-item">join() — Combine elements of an array into a single string and return the string
+        </li>
+        <li class="list-group-item">lastIndexOf() — Gives the last position at which a given element appears in an array
+        </li>
+        <li class="list-group-item">toString() — Converts elements to strings
+        </li>
+        <li class="list-group-item">shift() — Remove the first element of an array</li>
+        <li class="list-group-item"> sort() — Sorts elements alphabetically</li>
+        <li class="list-group-item">unshift() —Adds a new element to the beginning</li>
+        <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
+        <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
+        <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
+        <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
+      </ul>
+    </div>
+
+
   </div>
 
-
-</div>
-
-{% endblock%}
+  {% endblock%}
