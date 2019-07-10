@@ -23,3 +23,7 @@ def new_blog():
         db.session.commit()
         return redirect(url_for('main.index'))
     return render_template('new.html', code_form=form)
+
+@main.route('/js')
+def js():
+    return render_template("js.html")
