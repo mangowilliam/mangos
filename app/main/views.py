@@ -5,3 +5,7 @@ from .. import db
 @main.route('/')
 def index():
     return render_template("index.html")
+
+@main.route('/js')
+def js():
+    return render_template("js.html")

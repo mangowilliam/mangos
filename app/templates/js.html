@@ -1,41 +1,274 @@
 {% extends 'base.html'%}
 {% block content %}
 <div class="container">
-   <div class="row">
-       <ul class="list-group">
-           <li class="list-group-item active">Array Methods</li>
-           <li class="list-group-item">concat() — Join several arrays into one</li>
-           <li class="list-group-item">indexOf() — Returns the first position at which a given element appears in an
-               array
-           </li>
-           <li class="list-group-item">join() — Combine elements of an array into a single string and return the string
-               </li>
-           <li class="list-group-item">lastIndexOf() — Gives the last position at which a given element appears in an array
-               </li>
-           <li class="list-group-item">toString() — Converts elements to strings
-               </li>
-           <li class="list-group-item">shift() — Remove the first element of an array</li>
-           <li class="list-group-item"> sort() — Sorts elements alphabetically</li>
-           <li class="list-group-item">unshift() —Adds a new element to the beginning</li>
-           <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
-           <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
-           <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
-           <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
-       </ul>
-       <p>s
-           Once you have created arrays, there are a few things you can do with them:
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">JAVASCRIPT BASICS </li>
+        <li class="list-group-item list-group-item-secondary">Including JavaScript in an HTML Page </li>
+        <li class="list-group-item">&lt;script type="text/javascript"&gt; <br>
+          //JS code goes here <br>
+          &lt;/script&gt; </li>
+        <li class="list-group-item list-group-item-secondary">Call an External JavaScript File </li>
+        <li class="list-group-item">&lt;script src="name.js"&gt;&lt;/script&gt;</li>
+        <li class="list-group-item list-group-item-secondary">Including Comments </li>
+        <li class="list-group-item">Single line comments - // </li>
+        <li class="list-group-item">Multi-line comments - /* comment here */ </li>
+      </ul>
+    </div>
+  </div>
 
-           <li></li>
-           pop() — Removes the last element of an array
-           push() — Add a new element at the end
-           reverse() — Sort elements in a descending order
-           shift() — Remove the first element of an array
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">VARIABLES IN JAVASCRIPT </li>
+        <li class="list-group-item list-group-item-secondary">var, const, let </li>
+        <li class="list-group-item">var — The most common variable. Can be reassigned but only accessed
+          within a function. Variables defined with var move to the top when
+          code is executed.</li>
+        <li class="list-group-item">const — Can not be reassigned and not accessible before they appear
+          within the code. </li>
+        <li class="list-group-item">let — Similar to const, however, let variable can be reassigned but
+          not re-declared. </li>
+        <li class="list-group-item list-group-item-secondary">Data Types </li>
+        <li class="list-group-item">Numbers — var age = 3 </li>
+        <li class="list-group-item">Variables — var y </li>
+        <li class="list-group-item">Text (strings) — var a = "init" </li>
+        <li class="list-group-item">Operations — var b = 1 + 2 + 3 </li>
+        <li class="list-group-item">True or fase statements — var y = true </li>
+        <li class="list-group-item">Constant numbers — const PI = 3.14 </li>
+        <li class="list-group-item">Objects — var name = {firstName:"John", lastName:”Doe"} </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">ARRAYS</li>
+        <li class="list-group-item"> var fruit = ["Banana", "Apple", "Pear"]; </li>
+        <li class="list-group-item list-group-item-secondary">Array Methods </li>
+        <li class="list-group-item">concat() — Join several arrays into one</li>
+        <li class="list-group-item">indexOf() — Returns the first position at which a given element appears in an
+          array
+        </li>
+        <li class="list-group-item">join() — Combine elements of an array into a single string and return the string
+        </li>
+        <li class="list-group-item">lastIndexOf() — Gives the last position at which a given element appears in an array
+        </li>
+        <li class="list-group-item">toString() — Converts elements to strings
+        </li>
+        <li class="list-group-item">shift() — Remove the first element of an array</li>
+        <li class="list-group-item"> sort() — Sorts elements alphabetically</li>
+        <li class="list-group-item">unshift() —Adds a new element to the beginning</li>
+        <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
+        <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
+        <li class="list-group-item">slice() — Pulls a copy of a portion of an array into a new array</li>
+        <li class="list-group-item">valueOf() — Returns the primitive value of the specified object</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">OPERATORS </li>
+        <li class="list-group-item list-group-item-secondary">Basic Operators </li>
+        <li class="list-group-item">&(...) — Grouping operator, operations within brackets are executed
+          earlier than those outside</li>
+        <li class="list-group-item">% — Modulus (remainder ) </li>
+        <li class="list-group-item">++ — Increment numbers </li>
+        <li class="list-group-item">-- — Decrement numbers</li>
+        <li class="list-group-item">+ — Addition </li>
+        <li class="list-group-item">- — Subtraction </li>
+        <li class="list-group-item"> * — Multiplication</li>
+        <li class="list-group-item">- — Subtraction </li>
+        <li class="list-group-item list-group-item-secondary">Comparison Operators </li>
+        <li class="list-group-item">==— Equal to</li>
+        <li class="list-group-item">=== — Equal value and equal type</li>
+        <li class="list-group-item"> !=— Not equal</li>
+        <li class="list-group-item">-- — Decrement numbers</li>
+        <li class="list-group-item">!== — Not equal value or not equal type </li>
+        <li class="list-group-item"> &gt — Greater than</li>
+        <li class="list-group-item"> &lt — Less than</li>
+        <li class="list-group-item">&gt= — Greater than or equal to </li>
+        <li class="list-group-item"> &lt= — Less than or equal to</li>
+        <li class="list-group-item"> ? — Ternary operator</li>
+        <li class="list-group-item list-group-item-secondary">Logical Operators </li>
+        <li class="list-group-item">&& — Logical and</li>
+        <li class="list-group-item">|| — Logical or</li>
+        <li class="list-group-item"> ! — Logical not</li>
+        <li class="list-group-item list-group-item-secondary">Bitwise Operators </li>
+        <li class="list-group-item">& — AND statement</li>
+        <li class="list-group-item">| — OR statement</li>
+        <li class="list-group-item"> ~ — NOT</li>
+        <li class="list-group-item"> ^ — XOR</li>
+        <li class="list-group-item">&lt&lt — Left shift </li>
+        <li class="list-group-item">&gt&gt— Right shift</li>
+        <li class="list-group-item">&gt&gt&gt — Zero fill right shift</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">FUNCTION </li>
+        <li class="list-group-item">function name(parameter1, parameter2, parameter3) {<br>
+          // what the function does<br>
+          } </li>
+        <li class="list-group-item list-group-item-secondary">Outputting Data </li>
+        <li class="list-group-item">alert() — Output data in an alert box in the browser window</li>
+        <li class="list-group-item">confirm() — Opens up a yes/no dialog and returns true/false depending
+          on user click</li>
+        <li class="list-group-item">console.log() — Writes information to the browser console, good for
+          debugging purposes</li>
+        <li class="list-group-item">document.write() — Write directly to the HTML document</li>
+        <li class="list-group-item">prompt() — Creates an dialogue for user input</li>
+        <li class="list-group-item list-group-item-secondary">Global Functions </li>
+        <li class="list-group-item">decodeURI() — Decodes a Uniform Resource Identifier (URI) created
+          by encodeURI or similar</li>
+        <li class="list-group-item">decodeURIComponent() — Decodes a URI component</li>
+        <li class="list-group-item"> encodeURI() — Encodes a URI into UTF-8</li>
+        <li class="list-group-item">encodeURIComponent() — Same but for URI components</li>
+        <li class="list-group-item">eval() — Evaluates JavaScript code represented as a string </li>
+        <li class="list-group-item"> isFinite() — Determines whether a passed value is a finite number</li>
+        <li class="list-group-item"> isNaN() — Determines whether a value is NaN or not</li>
+        <li class="list-group-item">Number() — Returns a number converted from its argument </li>
+        <li class="list-group-item"> parseFloat() — Parses an argument and returns a floating point number</li>
+        <li class="list-group-item"> parseInt() — Parses its argument and returns an integer</li>
 
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">JAVASCRIPT LOOPS </li>
+        <li class="list-group-item">for (before loop; condition for loop; execute after loop) {<br>
+          // what to do during the loop
+          } <br> </li>
+        <li class="list-group-item">for — The most common way to create a loop in JavaScript</li>
+        <li class="list-group-item">while — Sets up conditions under which aloop executes</li>
+        <li class="list-group-item">do while — Similar to the while loop, however, it executes at least
+          once and performs a check at the end to see if the condition is met
+          to execute again</li>
+        <li class="list-group-item">break — Used to stop and exit the cycle at certain conditions</li>
+        <li class="list-group-item">continue — Skip parts of the cycle if certain conditions are met</li>
+        <li class="list-group-item list-group-item-secondary">IF - ELSE STATEMENTS </li>
+        <li class="list-group-item">if (condition) {<br>
+          // what to do if condition is met<br>
+          } else {<br>
+          // what to do if condition is not met<br>
+          }</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">STRINGS </li>
+        <li class="list-group-item">var person = "John Doe"; </li>
+        <li class="list-group-item">\' — Single quote<br>
+          \" — Double quote<br>
+          \\ — Backslash</li>
+        <li class="list-group-item list-group-item-secondary">String Methods </li>
+        <li class="list-group-item">charAt() — Returns a character at a specified position inside a
+          string </li>
+        <li class="list-group-item">charCodeAt() — Gives you the unicode of character at that position</li>
+        <li class="list-group-item">concat() — Concatenates (joins) two or more strings into one</li>
+        <li class="list-group-item">fromCharCode() — Returns a string created from the specified sequence
+          of UTF-16 code units</li>
 
-           splice() — Adds elements in a specified way and position
+        <li class="list-group-item">indexOf() — Provides the position of the first occurrence of a
+          specified text within a string</li>
+        <li class="list-group-item">lastIndexOf() — Same as indexOf() but with the last occurrence,
+          searching backwards</li>
+        <li class="list-group-item">match() — Retrieves the matches of a string against a search pattern</li>
+        <li class="list-group-item">replace() — Find and replace specified text in a string</li>
+        <li class="list-group-item">search() — Executes a search for a matching text and returns its
+          position </li>
+        <li class="list-group-item"> slice() — Extracts a section of a string and returns it as a new
+          string</li>
+        <li class="list-group-item">split() — Splits a string object into an array of strings at a
+          specified position</li>
+        <li class="list-group-item">substr() — Similar to slice() but extracts a substring depended on a
+          specified number of characters </li>
+        <li class="list-group-item"> substring() — Also similar to slice() but can’t accept negative
+          indices</li>
+        <li class="list-group-item"> toLowerCase() — Convert strings to lower case</li>
+        <li class="list-group-item"> toUpperCase() — Convert strings to upper case</li>
+        <li class="list-group-item"> valueOf() — Returns the primitive value (that has no properties or
+          methods) of a string object</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">NUMBERS AND MATH </li>
 
-           </p>
-   </div>
+        <li class="list-group-item list-group-item-secondary">Number Properties </li>
+        <li class="list-group-item">MAX_VALUE — The maximum numeric value representable in JavaScript</li>
+        <li class="list-group-item">MIN_VALUE — Smallest positive numeric value representable in
+          JavaScript</li>
+        <li class="list-group-item">NaN — The “Not-a-Number” value</li>
+        <li class="list-group-item">NEGATIVE_INFINITY — The negative Infinity value</li>
+        <li class="list-group-item">indexOf() — Provides the position of the first occurrence of a
+          specified text within a string</li>
+        <li class="list-group-item">POSITIVE_INFINITY — Positive Infinity value</li>
+        <li class="list-group-item list-group-item-secondary">Number Methods </li>
+        <li class="list-group-item">toExponential() — Returns a string with a rounded number written as
+          exponential notation</li>
+        <li class="list-group-item">toFixed() — Returns the string of a number with a specified number of
+          decimals</li>
+        <li class="list-group-item">toPrecision() — String of a number written with a specified length</li>
+        <li class="list-group-item"> toString() — Returns a number as a string</li>
+        <li class="list-group-item">valueOf() — Returns a number as a number</li>
+        <li class="list-group-item list-group-item-secondary">Math Properties </li>
+        <li class="list-group-item">SQRT2 — The square root of 2 </li>
+        <li class="list-group-item"> E — Euler’s number</li>
+        <li class="list-group-item"> LN2 — The natural logarithm of 2</li>
+        <li class="list-group-item"> LN10 — Natural logarithm of 10</li>
+        <li class="list-group-item"> PI — The number PI</li>
+        <li class="list-group-item list-group-item-secondary">Math Methods </li>
+        <li class="list-group-item">abs(x) — Returns the absolute (positive) value of x</li>
+        <li class="list-group-item"> acos(x) — The arccosine of x, in radians</li>
+        <li class="list-group-item"> asin(x) — Arcsine of x, in radians</li>
+        <li class="list-group-item"> Lexp(x) — Value of Ex</li>
+        <li class="list-group-item"> floor(x) — The value of x rounded down to its nearest integer</li>
+        <li class="list-group-item">log(x) — The natural logarithm (base E) of x</li>
+        <li class="list-group-item"> max(x,y,z,...,n) — Returns the number with the highest value</li>
+        <li class="list-group-item"> min(x,y,z,...,n) — Same for the number with the lowest value</li>
+        <li class="list-group-item">pow(x,y) — X to the power of y</li>
+        <li class="list-group-item">random() — Returns a random number between 0 and 1</li>
+        <li class="list-group-item"> round(x) — The value of x rounded to its nearest integer</li>
+        <li class="list-group-item"> sin(x) — The sine of x (x is in radians)</li>
+        <li class="list-group-item">sqrt(x) — Square root of x</li>
+        <li class="list-group-item">tan(x) — The tangent of an angle</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item active">JAVASCRIPT EVENTS </li>
+        <li class="list-group-item list-group-item-secondary">Mouse </li>
+        <li class="list-group-item">onclick — The event occurs when the user clicks on an element</li>
+        <li class="list-group-item">oncontextmenu — User right-clicks on an element to open a context
+          menu</li>
+        <li class="list-group-item">ondblclick — The user double-clicks on an element</li>
+        <li class="list-group-item">onmousedown — User presses a mouse button over an element</li>
+        <li class="list-group-item">onmouseenter — The pointer moves onto an element</li>
+        <li class="list-group-item">onmouseleave — Pointer moves out of an element</li>
+        <li class="list-group-item">onmouseover — When the pointer is moved onto an element or one of its
+          children</li>
+        <li class="list-group-item">onmouseout — User moves the mouse pointer out of an element or one of
+          its children</li>
+        <li class="list-group-item list-group-item-secondary">Keyboard</li>
+        <li class="list-group-item">onkeydown — When the user is pressing a key down</li>
+        <li class="list-group-item">onkeypress — The moment the user starts pressing a key</li>
+        <li class="list-group-item">onkeyup — The user releases a key</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 {% endblock%}
