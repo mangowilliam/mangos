@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    {%for comment in comments%}
+    <div class="alert alert-info" role="alert">
+        {{comment.comment}}
+        {% if current_user.role_id == 1 %}
+        <a href="{{url_for('main.delete_comment',id= comment.id)}}" class="btn btn-info">delete Comment</a>
+        {%endif%}
+    </div>
+    {%endfor%}
+    {{ wtf.quick_form(comment_form) }}
+
+</div>
+{% endblock%}

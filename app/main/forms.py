@@ -15,3 +15,7 @@ class CodeForm(FlaskForm):
     code = TextAreaField('Code',validators=[Required()])
     submit = SubmitField('Submit')
 
+class CommentForm(FlaskForm):
+    comment = TextAreaField('comment',validators=[Required()])
+    submit = SubmitField('Submit')
+
