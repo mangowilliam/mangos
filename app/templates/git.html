@@ -1,130 +1,152 @@
 {% extends 'base.html'%}
 {% block content %}
 <div class="container">
-    <div class="col-md-6">
-        <div class="jumbotron">
-            <h2>INSTALL GIT</h2>
-            <P>GitHub provides desktop clients that include a graphical user interface for the most common repository actions and an automatically updating command line edition of Git for advanced scenarios.</P>
-            
-            <h3>GitHub for Windows</h3>
-            <a href="htps://windows.github.com"></a>
-            
-            <h3>GitHub for Mac</h3>
-            <a href="htps://mac.github.com"></a>
-            
-            <p>Git distributions for Linux and POSIX systems are available on the official Git SCM web site.</p>
-            
-            <h3>Git distributions for All Platforms</h3>
-            <a href="htp://git-scm.com"></a>
-            
-            <h2>CONFIGURE TOOLING</h2>
-            <p>Configure user information for all local repositories</p>
-            <h5>$ git config --global user.name "[name]"</h5>
-            <p>Sets the name you want atached to your commit transactions</p>
-            <h5>$ git config --global user.email "[email address]"</h5>
-            <p>Sets the email you want atached to your commit transactions</p>
-            <h5>$ git config --global color.ui auto</h5>
-            <p>Enables helpful colorization of command line output</p>
-            
-            <h2>CREATE REPOSITORIES</h2>
-            <p>Start a new repository or obtain one from an existing URL</p>
-            <h5>$ git init [project-name]</h5>
-            <p>Creates a new local repository with the specified name</p>
-            <h5>$ git clone [url]</h5>
-            <p>Downloads a project and its entire version history</p>
-            
-            <h2>MAKE CHANGES</h2>
-            <p>Review edits and craft a commit transaction</p>
-            <h5>$ git status</h5>
-            <p>Lists all new or modified files to be commited</p>
-            <h5>$ git diff</h5>
-            <p>Shows file differences not yet staged</p>
-            <h5>$ git add [file]</h5>
-            <p>Snapshots the file in preparation for versioning</p>
-            <h5>$ git diff --staged</h5>
-            <p>Shows file differences between staging and the last file version</p>
-            <h5>$ git reset [file]</h5>
-            <p>Unstages the file, but preserve its contents</p>
-            <h5>$ git commit -m "[descriptive message]"</h5>
-            <p>Records file snapshots permanently in version history</p>
-            
-            <h2>GROUP CHANGES</h2>
-            <p>Name a series of commits and combine complete efforts</p>
-            <h5>$ git branch</h5>
-            <p>Lists all local branches in the current repository</p>
-            <h5>$ git branch [branch-name]</h5>
-            <p>Creates a new branch</p>
-            <h5>$ git checkout [branch-name]</h5>
-            <p>Switches to the specified branch and updates the working directory</p>
-            <h5>$ git merge [branch]</h5>
-            <p>Combines the specified branch’s history into the current branch</p>
-            <h5>$ git branch -d [branch-name]</h5>
-            <p>Deletes the specified branch</p>
-            
-            
-            <h2>REFACTOR FILENAMES</h2>
-            <p>Relocate and remove versioned files</p>
-            <h5>$ git rm [file]</h5>
-            <p>Deletes the file from the working directory and stages the deletion</p>
-            <h5>$ git rm --cached [file]</h5>
-            <p> Removes the file from version control but preserves the file locally </p>
-            <h5> $ git mv [file-original] [file-renamed] </h5>
-            <p> Changes the file name and prepares it for commit </p>
-            
-            <h2>SUPRESS TRACKING</h2>
-            <p>Exclude temporary files and paths</p>
-            
-            <h6>*.log</h6>
-            <h6>build/</h6>
-            <h6>temp-*</h6>
-            <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
-            
-            <h5>$ git ls-files --other --ignored --exclude-standard</h5>
-            <p>Lists all ignored files in this project</p>
-            
-            <h2>SAVE FRAGMENTS</h2>
-            Shelve and restore incomplete changes
-            
-            <h5>$ git stash</h5>
-            <p> Temporarily stores all modified tracked files </p>
-            
-            <h5>$ git stash pop</h5>
-            <p>Restores the most recently stashed files</p>
-            
-            <h5>$ git stash list</h5>
-            <p>Lists all stashed changesets</p>
-            
-            <h5>$ git stash drop</h5>
-            <p>Discards the most recently stashed changeset</p>
-            
-            <h2>REVIEW HISTORY</h2>
-            <p>Browse and inspect the evolution of project files</p>
-            <h5>$ git log</h5>
-            <p>version history for the current branch</p> 
-            <h5>$ git log --follow [file]</h5> 
-            <p>Lists version history for a file, including renames</p>
-            <h5>$ git diff [first-branch]...[second-branch]</h5>
-            <p>Shows content differences between two branches</p>
-            <h5>$ git show [commit]</h5>
-            <p>Outputs metadata and content changes of the specified commit</p>
-            
-            <h2>REDO COMMITS</h2>
-            <p>Erase mistakes and craf replacement history</p>
-            <h5>$ git reset [commit]</h5>
-            <p>Undoes all commits afer [commit], preserving changes locally</p>
-            <h5>$ git reset --hard [commit]</h5>
-            <p>Discards all history and changes back to the specified commit</p>
-            
-            <h2>SYNCHRONIZE CHANGES</h2>
-            <p>Register a repository bookmark and exchange version history</p>
-            <h5>$ git fetch [bookmark]</h5>
-            <p>Downloads all history from the repository bookmark</p>
-            <h5>$ git merge [bookmark]/[branch]</h5>
-            <p>Combines bookmark’s branch into current local branch</p>
-            <h5>$ git push [alias] [branch]</h5>
-            <p>Uploads all local branch commits to GitHub</p>
-            <h5>$ git pull</h5>
-            <p>Downloads bookmark history and incorporates changes</p>
+    <div class="col-md-12">
+        <div class="card testimonial-card">
+            <!-- Content -->
+            <div class="card-body">
+                <!-- Name -->
+                <h5 class="card-title">GITHUB</h5>
+                <hr>
+                <P>GitHub provides desktop clients that include a graphical user interface for the most common
+                    repository
+                    actions and an automatically updating command line edition of Git for advanced scenarios.</P>
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item active">INSTALL GIT</li>
+                        <li class="list-group-item">var — The most common variable. Can be reassigned but only
+                            accessed
+                            within a function. Variables defined with var move to the top when
+                            code is executed.</li>
+                        <li class="list-group-item">GitHub for Windows
+                            <a href="htps://windows.github.com">link</a></li>
+
+                        <li class="list-group-item">GitHub for Mac
+                            <a href="htps://mac.github.com">link</a></li>
+
+                        <li class="list-group-item">Git distributions for All Platforms
+                            <a href="htp://git-scm.com">link</a></li>
+                        <li class="list-group-item active">CONFIGURE TOOLING</li>
+                        <p>Configure user information for all local repositories</p>
+                        <li class="list-group-item">$ git config --global user.name "[name]"</li>
+                        <p>Sets the name you want atached to your commit transactions</p>
+                        <li class="list-group-item">$ git config --global user.email "[email address]"</li>
+                        <p>Sets the email you want atached to your commit transactions</p>
+                        <li class="list-group-item">$ git config --global color.ui auto</li>
+                        <p>Enables helpful colorization of command line output</p>
+
+                        <li class="list-group-item active">CREATE REPOSITORIES</li>
+                        <p>Start a new repository or obtain one from an existing URL</p>
+                        <li class="list-group-item">$ git init [project-name]</li>
+                        <p>Creates a new local repository with the specified name</p>
+                        <li class="list-group-item">$ git clone [url]</li>
+                        <p>Downloads a project and its entire version history</p>
+
+                        <li class="list-group-item active">MAKE CHANGES</li>
+                        <p>Review edits and craft a commit transaction</p>
+                        <li class="list-group-item">$ git status</li>
+                        <p>Lists all new or modified files to be commited</p>
+                        <li class="list-group-item">$ git diff</li>
+                        <p>Shows file differences not yet staged</p>
+                        <li class="list-group-item">$ git add [file]</li>
+                        <p>Snapshots the file in preparation for versioning</p>
+                        <li class="list-group-item">$ git diff --staged</li>
+                        <p>Shows file differences between staging and the last file version</p>
+                        <li class="list-group-item">$ git reset [file]</li>
+                        <p>Unstages the file, but preserve its contents</p>
+                        <li class="list-group-item">$ git commit -m "[descriptive message]"</li>
+                        <p>Records file snapshots permanently in version history</p>
+
+                        <li class="list-group-item active">GROUP CHANGES</li>
+                        <p>Name a series of commits and combine complete efforts</p>
+                        <li class="list-group-item">$ git branch</li>
+                        <p>Lists all local branches in the current repository</p>
+                        <li class="list-group-item">$ git branch [branch-name]</li>
+                        <p>Creates a new branch</p>
+                        <li class="list-group-item">$ git checkout [branch-name]</li>
+                        <p>Switches to the specified branch and updates the working directory</p>
+                        <li class="list-group-item">$ git merge [branch]</li>
+                        <p>Combines the specified branch’s history into the current branch</p>
+                        <li class="list-group-item">$ git branch -d [branch-name]</li>
+                        <p>Deletes the specified branch</p>
+
+
+                        <li class="list-group-item active">REFACTOR FILENAMES</li>
+                        <p>Relocate and remove versioned files</p>
+                        <li class="list-group-item">$ git rm [file]</li>
+                        <p>Deletes the file from the working directory and stages the deletion</p>
+                        <li class="list-group-item">$ git rm --cached [file]</li>
+                        <p> Removes the file from version control but preserves the file locally </p>
+                        <li class="list-group-item"> $ git mv [file-original] [file-renamed] </li>
+                        <p> Changes the file name and prepares it for commit </p>
+
+                        <li class="list-group-item active">SUPRESS TRACKING</li>
+                        <p>Exclude temporary files and paths</p>
+
+                        <h6>*.log</h6>
+                        <h6>build/</h6>
+                        <h6>temp-*</h6>
+                        <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the
+                            specified
+                            paterns</p>
+
+                        <li class="list-group-item">$ git ls-files --other --ignored --exclude-standard</li>
+                        <p>Lists all ignored files in this project</p>
+
+                        <li class="list-group-item active">SAVE FRAGMENTS</li>
+                        Shelve and restore incomplete changes
+
+                        <li class="list-group-item">$ git stash</li>
+                        <p> Temporarily stores all modified tracked files </p>
+
+                        <li class="list-group-item">$ git stash pop</li>
+                        <p>Restores the most recently stashed files</p>
+
+                        <li class="list-group-item">$ git stash list</li>
+                        <p>Lists all stashed changesets</p>
+
+                        <li class="list-group-item">$ git stash drop</li>
+                        <p>Discards the most recently stashed changeset</p>
+
+                        <li class="list-group-item active">REVIEW HISTORY</li>
+                        <p>Browse and inspect the evolution of project files</p>
+                        <li class="list-group-item">$ git log</li>
+                        <p>version history for the current branch</p>
+                        <li class="list-group-item">$ git log --follow [file]</li>
+                        <p>Lists version history for a file, including renames</p>
+                        <li class="list-group-item">$ git diff [first-branch]...[second-branch]</li>
+                        <p>Shows content differences between two branches</p>
+                        <li class="list-group-item">$ git show [commit]</li>
+                        <p>Outputs metadata and content changes of the specified commit</p>
+
+                        <li class="list-group-item active">REDO COMMITS</li>
+                        <p>Erase mistakes and craf replacement history</p>
+                        <li class="list-group-item">$ git reset [commit]</li>
+                        <p>Undoes all commits afer [commit], preserving changes locally</p>
+                        <li class="list-group-item">$ git reset --hard [commit]</li>
+                        <p>Discards all history and changes back to the specified commit</p>
+
+                        <li class="list-group-item active">SYNCHRONIZE CHANGES</li>
+                        <p>Register a repository bookmark and exchange version history</p>
+                        <li class="list-group-item">$ git fetch [bookmark]</li>
+                        <p>Downloads all history from the repository bookmark</p>
+                        <li class="list-group-item">$ git merge [bookmark]/[branch]</li>
+                        <p>Combines bookmark’s branch into current local branch</p>
+                        <li class="list-group-item">$ git push [alias] [branch]</li>
+                        <p>Uploads all local branch commits to GitHub</p>
+                        <li class="list-group-item">$ git pull</li>
+                        <p>Downloads bookmark history and incorporates changes</p>
+
+                    </ul>
+                </div>
+            </div><br></p>
         </div>
+
     </div>
+    <!-- Card -->
+    <br>
+
 </div>
+</div>
+</div>
+{% endblock%}

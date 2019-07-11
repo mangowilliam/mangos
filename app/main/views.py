@@ -29,9 +29,9 @@ def js():
     codes = Code.query.all()
     return render_template("js.html" ,codes = codes)
 
-@main.route('/py')
-def css():
-    return render_template("css.html")
+@main.route('/git')
+def git():
+    return render_template("git.html")
 
 @main.route('/new_comment/<int:id>', methods=['GET', 'POST'])
 @login_required
