@@ -23,6 +23,9 @@ class User(UserMixin, db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
+    comment = db.relationship('Comment',backref = 'user',lazy = "dynamic")
+    code = db.relationship('Code',backref = 'user',lazy = "dynamic")
+    quiz = db.relationship('Quiz',backref = 'user',lazy = "dynamic")
 
     @property
     def password(self):
@@ -81,6 +84,8 @@ class Comment(db.Model):
     comment = db.Column(db.String(255))
     posted = db.Column(db.DateTime, default=datetime.utcnow)
     code_id = db.Column(db.Integer, db.ForeignKey("codes.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    quiz_id = db.Column(db.Integer, db.ForeignKey("quizes.id"))
 
     def save_comment(self):
         db.session.add(self)
@@ -100,12 +105,11 @@ class Comment(db.Model):
 class Quiz(db.Model):
     __tablename__ = 'quizes'
     id = db.Column(db.Integer, primary_key=True)
-    quiz_title = db.Column(db.String)
     question = db.Column(db.String)
     category = db.Column(db.Integer)
     posted = db.Column(db.Time, default=datetime.utcnow())
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    comment_id = db.relationship("Comment", backref="codes", lazy="dynamic")
+    comment = db.relationship('Comment',backref = 'quiz',lazy = "dynamic")
 
     def save_quiz(self):
         db.session.add(self)
