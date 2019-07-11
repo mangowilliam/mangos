@@ -1,4 +1,3 @@
-
 from flask import Flask
 from config import config_options
 from flask_bootstrap import Bootstrap
@@ -13,9 +12,9 @@ login_manager.login_view = 'auth.login'
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 
-def create_app(config_state):
+def create_app(config_name):
     app = Flask(__name__)
-    app.config.from_object(config_options[config_state])
+    app.config.from_object(config_options[config_name])
 
 
     bootstrap.init_app(app)
