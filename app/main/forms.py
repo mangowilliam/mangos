@@ -17,13 +17,13 @@ class CodeForm(FlaskForm):
 class CommentForm(FlaskForm):
     comment = TextAreaField('comment',validators=[Required()])
     submit = SubmitField('Submit')
-  class QuizForm(FlaskForm):
-    quiz_title = StringField('Title', validators=[Required()])
+
+class QuizForm(FlaskForm):
     category = SelectField(' Select Category', coerce=int,
                            choices=[(0, 'Please Select a category...'),
                                     (1, 'JS'), (2, 'CSS'), (3, 'GIT'), (4, 'PYTHON')],
                            validators=[Required()])
-    Question = TextAreaField('qustion', validators=[Required()])
+    Question = TextAreaField('question', validators=[Required()])
     submit = SubmitField('Submit')
 
 

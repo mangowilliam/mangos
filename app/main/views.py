@@ -1,8 +1,8 @@
 from flask import abort, redirect, render_template, request, url_for
 from .. import db
 from . import main
-from .forms import CodeForm,CommentForm
-from ..models import Code,Comment
+from .forms import CodeForm, CommentForm, QuizForm
+from ..models import Code, Comment, Quiz
 from flask_login import login_user, logout_user, login_required, current_user
 
 
@@ -15,23 +15,31 @@ def index():
 def new_blog():
     form = CodeForm()
     if form.validate_on_submit():
-        code = Code(code=form.code.data, category = form.category.data, code_title=form.code_title.data, user_id = current_user.id,
+        code = Code(code=form.code.data, category=form.category.data, code_title=form.code_title.data, user_id=current_user.id,
                     code_upvotes=0, code_downvotes=0)
-                
+
         code.save_blog
         db.session.add(code)
         db.session.commit()
         return redirect(url_for('main.index'))
     return render_template('new.html', code_form=form)
 
+
 @main.route('/js')
 def js():
     codes = Code.query.all()
-    return render_template("js.html" ,codes = codes)
+    return render_template("js.html", codes=codes)
+
 
 @main.route('/git')
-def git():
+def py():
     return render_template("git.html")
+
+
+@main.route('/py')
+def git():
+    return render_template("py.html")
+
 
 @main.route('/new_comment/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -46,17 +54,18 @@ def new_comment(id):
         db.session.commit()
         return redirect(url_for('main.js'))
     return render_template('comment.html', comment_form=form, comments=comments)
-  
-  @main.route('/quiz', methods=['GET', 'POST'])
+
+
+@main.route('/quiz', methods=['GET', 'POST'])
+@login_required
 def quiz():
-    form = quizForm()
+    form = QuizForm()
     if form.validate_on_submit():
-        quiz = Quiz(question=form.question.data, category=form.category.data,
-                    quiz_title=form.code_title.data, user_id=current_user.id)
+        quiz = Quiz(question=form.Question.data, category=form.category.data,
+                    user_id=current_user.id)
 
         quiz.save_quiz
         db.session.add(quiz)
         db.session.commit()
         return redirect(url_for('main.index'))
     return render_template('quiz.html', quiz_form=form)
-
