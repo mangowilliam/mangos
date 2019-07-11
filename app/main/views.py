@@ -1,6 +1,6 @@
-from flask import render_template, request, redirect, url_for,abort
-from . import main
+from flask import abort, redirect, render_template, request, url_for
 from .. import db
+from . import main
 from .forms import CodeForm,CommentForm
 from ..models import Code,Comment
 from flask_login import login_user, logout_user, login_required, current_user
@@ -46,3 +46,17 @@ def new_comment(id):
         db.session.commit()
         return redirect(url_for('main.js'))
     return render_template('comment.html', comment_form=form, comments=comments)
+  
+  @main.route('/quiz', methods=['GET', 'POST'])
+def quiz():
+    form = quizForm()
+    if form.validate_on_submit():
+        quiz = Quiz(question=form.question.data, category=form.category.data,
+                    quiz_title=form.code_title.data, user_id=current_user.id)
+
+        quiz.save_quiz
+        db.session.add(quiz)
+        db.session.commit()
+        return redirect(url_for('main.index'))
+    return render_template('quiz.html', quiz_form=form)
+
