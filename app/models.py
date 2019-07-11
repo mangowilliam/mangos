@@ -1,9 +1,11 @@
+from . import db
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
 from datetime import datetime
-
 from flask_login import UserMixin
 from werkzeug.security import check_password_hash, generate_password_hash
-
 from . import db, login_manager
+
 
 
 @login_manager.user_loader
@@ -40,22 +42,7 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return f'User {self.username}'
 
-
-
-class Quiz(db.Model):
-    __tablename__ = 'quizes'
-    id = db.Column(db.Integer, primary_key=True)
-    quiz_title = db.Column(db.String)
-    question = db.Column(db.String)
-    category = db.Column(db.Integer)
-    posted = db.Column(db.Time, default=datetime.utcnow())
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    comment_id = db.relationship("Comment", backref="codes", lazy="dynamic")
     
-    def save_quiz(self):
-      db.session.add(self)
-      db.session.commit()
-
 class Code(db.Model):
     __tablename__ = 'codes'
     id = db.Column(db.Integer, primary_key=True)
@@ -66,29 +53,24 @@ class Code(db.Model):
     category = db.Column(db.Integer)
     posted = db.Column(db.Time, default=datetime.utcnow())
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    comment_id = db.relationship("Comment", backref="codes", lazy="dynamic")
-    
-    def save_blog(self):
-      db.session.add(self)
-      db.session.commit()
-
-    
 
 
-       
+    def save_code(self):
+        db.session.add(self)
+        db.session.commit()
 
     @classmethod
+    def get_code(cls, id):
+        code = Code.query.filter_by(id=id).first()
+        return code
 
-    def get_blog(cls, id):
-        blog = Code.query.filter_by(id=id).first()
-        return blog
 
     @classmethod
     def get_codes(cls, id):
         codes = Code.query.filter_by(id=id).all()
         return codes
 
-    def delete_blog(self):
+    def delete_code(self):
         db.session.delete(self)
         db.session.commit()
 
@@ -110,7 +92,35 @@ class Comment(db.Model):
 
     @classmethod
     def get_comments(self, id):
-        comments = Comment.query.filter_by(code_id =id).all()
+        comments = Comment.query.filter_by(code_id=id).all()
         return comments
 
 
+
+class Quiz(db.Model):
+    __tablename__ = 'quizes'
+    id = db.Column(db.Integer, primary_key=True)
+    quiz_title = db.Column(db.String)
+    question = db.Column(db.String)
+    category = db.Column(db.Integer)
+    posted = db.Column(db.Time, default=datetime.utcnow())
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    comment_id = db.relationship("Comment", backref="codes", lazy="dynamic")
+
+    def save_quiz(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_quiz(cls, id):
+        quiz = Quiz.query.filter_by(id=id).first()
+        return quiz
+
+    @classmethod
+    def get_quizes(cls, id):
+        quizes = Quiz.query.filter_by(id=id).all()
+        return quizes
+
+    def delete_quiz(self):
+        db.session.delete(self)
+        db.session.commit()
