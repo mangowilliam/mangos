@@ -109,7 +109,7 @@ class Quiz(db.Model):
     category = db.Column(db.Integer)
     posted = db.Column(db.Time, default=datetime.utcnow())
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    comment = db.relationship('Comment',backref = 'quiz',lazy = "dynamic")
+    answer = db.relationship('Comment',backref = 'quiz',lazy = "dynamic")
 
     def save_quiz(self):
         db.session.add(self)
@@ -126,5 +126,32 @@ class Quiz(db.Model):
         return quizes
 
     def delete_quiz(self):
+        db.session.delete(self)
+        db.session.commit()
+
+class Answer(db.Model):
+    __tablename__ = 'answers'
+    id = db.Column(db.Integer, primary_key=True)
+    answer = db.Column(db.String)
+    posted = db.Column(db.Time, default=datetime.utcnow())
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    quiz_id = db.Column(db.Integer, db.ForeignKey("quizes.id"))
+    
+
+    def save_answer(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_answer(cls, id):
+        answer = Answer.query.filter_by(id=id).first()
+        return answer
+
+    @classmethod
+    def get_answers(cls, id):
+        answers = Answer.query.filter_by(id=id).all()
+        return answers
+
+    def delete_answer(self):
         db.session.delete(self)
         db.session.commit()
