@@ -58,7 +58,6 @@ def new_comment(id):
 
 
 @main.route('/quiz', methods=['GET', 'POST'])
-@login_required
 def quiz():
     form = QuizForm()
     answers = Answer.query.all()
