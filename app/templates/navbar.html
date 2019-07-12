@@ -13,7 +13,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/js">JS</a>
       </li>
-      
+
       <li class="nav-item">
         <a class="nav-link" href="/py">PYTHON</a>
       </li>
@@ -21,20 +21,22 @@
         <a class="nav-link" href="/git">GIT</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="/new">New Cheat Sheet</a>
-        </li>
+        <a class="nav-link" href="/new">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/quiz">Ask Question</a>
+      </li>
 
-      
+
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
-      
+
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
           <i class="fas fa-user"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
+        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
           {% if current_user.is_authenticated %}
           <a class="dropdown-item" href="{{url_for('auth.logout')}}">Sign Out</a>
           {%else%}

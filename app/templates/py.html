@@ -1,0 +1,146 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {%for code in codes%}
+        {%if code.category == 1%}
+
+        <!-- Card -->
+        <div class="card testimonial-carde">
+            <!-- Content -->
+            <div class="card-body">
+                <div class="col-md-12">
+
+                    <ul class="list-group">
+                        <li class="list-group-item active">{{code.code_title}}</li>
+                        <li class="list-group-item ">{{code.code| capitalize}}.</li>
+                    </ul>
+                    <a href="{{url_for('main.new_comment',id=code.id)}}" class="btn btn-info"><i
+                            class="fas fa-clone left"></i> Comments</a>
+                </div>
+            </div>
+        </div><br>
+        {% endif %}
+        {% endfor %}
+        <div class="card testimonial-card">
+            <!-- Content -->
+            <div class="card-body">
+                <!-- Name -->
+                <h5 class="card-title">Python</h5>
+                <hr>
+                <!-- Quotation -->
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item active">Lists</li>
+                        <li class="list-group-item">var — The most common variable. Can be reassigned but only
+                            accessed
+                            within a function. Variables defined with var move to the top when
+                            code is executed.</li>
+                        <li class="list-group-item">const — Can not be reassigned and not accessible before they
+                            appear
+                            within the code. </li>
+                        <li class="list-group-item">let — Similar to const, however, let variable can be reassigned
+                            but
+                            not re-declared. </li>
+                        <li class="list-group-item active">Data Types </li>
+                        <li class="list-group-item">Numbers — var age = 3 </li>
+                        <li class="list-group-item">Variables — var y </li>
+                        <li class="list-group-item">Text (strings) — var a = "init" </li>
+                        <li class="list-group-item">Operations — var b = 1 + 2 + 3 </li>
+                        <li class="list-group-item">True or fase statements — var y = true </li>
+                        <li class="list-group-item">Constant numbers — const PI = 3.14 </li>
+                        <li class="list-group-item">Objects — var name = {firstName:"John", lastName:”Doe"} </li>
+                        <li class="list-group-item">list = [ ]</li>
+                        <li class="list-group-item">list[i:j] # returns list subset</li>
+                        <li class="list-group-item">list[-1] # returns last element</li>
+                        <li class="list-group-item">list[:-1] # returns all but the last element
+                        </li>
+                        <li class="list-group-item">list[i] = val</li>
+                        <li class="list-group-item">list[i:j] = otherlist # replace ith to jth element with otherlist
+                        </li>
+                        <li class="list-group-item">del list[i:j]</li>
+                        <li class="list-group-item">list.append(item)</li>
+                        <li class="list-group-item">list.extend(another_list)</li>
+                        <li class="list-group-item">list.insert(index, item)</li>
+                        <li class="list-group-item">list.pop() # returns and removes last element from the list</li>
+                        <li class="list-group-item">list.pop(i) # returns and removes i-th element from the list</li>
+                        <li class="list-group-item">list.remove(i) # removes the first item from the list whose value is
+                            i
+                        </li>
+                        <li class="list-group-item">list1 + list2 # combine two list </li>
+                        <li class="list-group-item">set(list) # remove duplicate elements from a list</li>
+                        <li class="list-group-item">list.reverse() # reverses the elements of the list in-place</li>
+
+                        <li class="list-group-item">zip(list1, list2) # returns list of tuples with n-th element of both
+                            list1 and list2</li>
+                        <li class="list-group-item">list.sort() # sorts in-place, returns None</li>
+                        <li class="list-group-item">sorted(list) # returns sorted copy of list</li>
+                        <li class="list-group-item">",".join(list) # returns a string with list elements seperated by
+                            comma
+                        </li>
+
+
+                        <li class=" list-group-item active">list-group-item">Dict</p>
+                        <li class="list-group-item">dict.keys()</li>
+                        <li class="list-group-item">dict.values()</li>
+                        <li class="list-group-item">"key" in dict # let's say this returns False, then...</li>
+                        <li class="list-group-item">dict["key"] # ...this raises KeyError</li>
+                        <li class="list-group-item">dict.get("key") # ...this returns None
+                        </li>
+                        <li class="list-group-item">dict.setdefault("key", 1)
+                        </li>
+
+
+                        <li class=" list-group-item active">list-group-item">Iteration</p>
+                        <li class="list-group-item">for item in ["a", "b", "c"]:</li>
+                        <li class="list-group-item">for i in range(4): # 0 to 3</li>
+                        <li class="list-group-item">for i in range(4, 8): # 4 to 7</li>
+                        <li class="list-group-item">for i in range(1, 9, 2): # 1, 3, 5, 7</li>
+                        <li class="list-group-item">for key, val in dict.items():</li>
+                        <li class="list-group-item">for index, item in enumerate(list):</li>
+
+                        <li class=" list-group-item active">list-group-item">String</p>
+                        <li class="list-group-item">str[0:4]</li>
+                        <li class="list-group-item">len(str)</li>
+                        <li class="list-group-item">string.replace("-", " ")</li>
+                        <li class="list-group-item">",".join(list)</li>
+                        <li class="list-group-item">"hi {0}".format('j')</li>
+                        <li class="list-group-item">str.find(",")</li>
+                        <li class="list-group-item">str.index(",") # same, but raises IndexError</li>
+                        <li class="list-group-item">str.count(",")</li>
+                        <li class="list-group-item">str.split(",")</li>
+                        <li class="list-group-item">str.lower()</li>
+                        <li class="list-group-item">str.upper()</li>
+                        <li class="list-group-item">str.title()</li>
+                        <li class="list-group-item">str.lstrip()
+                        </li>
+                        <li class="list-group-item">str.rstrip()</li>
+                        <li class="list-group-item">str.strip()</li>
+                        <li class="list-group-item">str.islower()</li>
+
+                        <li class=" list-group-item active">list-group-item">Casting</p>
+                        <li class="list-group-item">int(str)</li>
+                        <li class="list-group-item">float(str)</li>
+                        <li class="list-group-item">str(int)</li>
+                        <li class="list-group-item">str(float)</li>
+                        <li class="list-group-item">'string'.encode()</li>
+
+                        <li class=" list-group-item active">list-group-item">Comprehension</p>
+                        <li class="list-group-item">[fn(i) for i in list] # .map</li>
+                        <li class="list-group-item">map(fn, list) # .map, returns iterator </li>
+                        <li class="list-group-item">filter(fn, list) # .filter, returns iterator</li>
+                        <li class="list-group-item">[fn(i) for i in list if i > 0] # .filter.map</li>
+
+                        <li class=" list-group-item active">list-group-item">Regex</p>
+                        <li class="list-group-item">import re </li>
+                        <li class="list-group-item">re.match(r'^[aeiou]', str)</li>
+                        <li class="list-group-item">re.sub(r'^[aeiou]', '?', str)</li>
+                        <li class="list-group-item">re.sub(r'(xyz)', r'\1', str)</li>
+                        <li class="list-group-item">expr = re.compile(r'^...$')</li>
+                        <li class="list-group-item">expr.match(...)</li>
+                        <li class="list-group-item">expr.sub(...)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock%}

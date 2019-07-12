@@ -3,43 +3,15 @@
 
 
 <div class="container">
+    <!-- Name -->
+    <h5 class="card-title"> JAVASCRIPT </h5>
+    <hr>
 
-    {%for code in codes%}
-    {%if code.category == 1%}
-    <div class="col-md-12">
-        <!-- Card -->
-        <div class="card card-image"
-            style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
-            <!-- Content -->
-            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                <div>
-                    <h4 class="pink-text"><strong>{{code.code_title}}</strong></h4>
-                    <p >{{code.code| capitalize}}.</p>
-                    <a href="{{url_for('main.new_comment',id=code.id)}}" class="btn btn-blue"><i
-                            class="fas fa-clone left"></i> Comments</a>
-                    <a href="">
-                        <i class="material-icons"></i>
-                        <i class="btn btn-outline-primary waves-effect"><i
-                                class="fas fa-thumbs-up"></i></i>
-                    </a>{{code.code_upvotes}}
-                    <a href=''>
-                        <i class="material-icons"></i>
-                        <i class="btn btn-outline-primary waves-effect"><i
-                                class="fas fa-thumbs-down"></i></i>
-                    </a>{{code.code_downvotes}}
-                </div>
-            </div>
-        </div><br>
-    </div><br>
-    {% endif %}
-    {% endfor %}
-
+    
     <div class="card testimonial-card">
         <!-- Content -->
         <div class="card-body">
-            <!-- Name -->
-            <h5 class="card-title">VARIABLES IN JAVASCRIPT </h5>
-            <hr>
+
             <!-- Quotation -->
 
             <div class="col-md-12">
@@ -383,9 +355,6 @@
     </div><br></p>
 </div>
 
-</div>
-</div>
-</div>
-</div>
+
 
 {% endblock%}

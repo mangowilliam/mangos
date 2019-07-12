@@ -4,6 +4,29 @@
 
 {% block content %}
 <div class="container">
-{{ wtf.quick_form(code_form) }}
+    <div class="row">
+        <div class="col-md-6">
+            {{ wtf.quick_form(code_form) }}
+        </div>
+        <div class="col-md-6">
+           {%for code in codes%} <!-- Card -->
+                <div class="card testimonial-carde">
+                    <!-- Content -->
+                    <div class="card-body">
+                        <div class="col-md-12">
+
+                            <ul class="list-group">
+                                <li class="list-group-item active">{{code.code_title}}</li>
+                                <li class="list-group-item ">{{code.code| capitalize}}.</li>
+                            </ul>
+                            <a href="{{url_for('main.new_comment',id=code.id)}}" class="btn btn-info"><i
+                                    class="fas fa-clone left"></i> Comments</a>
+                        </div>
+                    </div>
+                </div><br>
+                {% endfor %}
+        </div>
+
+    </div>
 </div>
 {% endblock%}

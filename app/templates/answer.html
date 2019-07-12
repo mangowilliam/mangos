@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+{%for answer in answers%}
+<div class="container">
+    <!-- Card -->
+    <div class="card testimonial-carde">
+        <!-- Content -->
+        <div class="card-body">
+            <div class="col-md-12">
+
+                <ul class="list-group">
+                    <li class="list-group-item active">{{answer.answer}}</li>
+                    <li class="list-group-item "></li>
+                </ul>
+            </div>
+        </div>
+    </div><br>
+    {% endfor %}
+    {{ wtf.quick_form(form) }}
+</div>
+
+
+{% endblock%}
