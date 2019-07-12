@@ -2,6 +2,26 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        {%for code in codes%}
+        {%if code.category == 1%}
+
+        <!-- Card -->
+        <div class="card testimonial-carde">
+            <!-- Content -->
+            <div class="card-body">
+                <div class="col-md-12">
+
+                    <ul class="list-group">
+                        <li class="list-group-item active">{{code.code_title}}</li>
+                        <li class="list-group-item ">{{code.code| capitalize}}.</li>
+                    </ul>
+                    <a href="{{url_for('main.new_comment',id=code.id)}}" class="btn btn-info"><i
+                            class="fas fa-clone left"></i> Comments</a>
+                </div>
+            </div>
+        </div><br>
+        {% endif %}
+        {% endfor %}
         <div class="card testimonial-card">
             <!-- Content -->
             <div class="card-body">
@@ -98,7 +118,7 @@
                         <li class="list-group-item">str.strip()</li>
                         <li class="list-group-item">str.islower()</li>
 
-                       <li class=" list-group-item active">list-group-item">Casting</p>
+                        <li class=" list-group-item active">list-group-item">Casting</p>
                         <li class="list-group-item">int(str)</li>
                         <li class="list-group-item">float(str)</li>
                         <li class="list-group-item">str(int)</li>

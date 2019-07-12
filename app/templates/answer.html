@@ -1,11 +1,9 @@
 {% extends 'base.html'%}
 
 {% import 'bootstrap/wtf.html' as wtf%}
-
 {% block content %}
+{%for answer in answers%}
 <div class="container">
-    {%for code in codes%}
-
     <!-- Card -->
     <div class="card testimonial-carde">
         <!-- Content -->
@@ -13,15 +11,15 @@
             <div class="col-md-12">
 
                 <ul class="list-group">
-                    <li class="list-group-item active">{{code.code_title}}</li>
-                    <li class="list-group-item ">{{code.code| capitalize}}.</li>
+                    <li class="list-group-item active">{{answer.answer}}</li>
+                    <li class="list-group-item "></li>
                 </ul>
-                <a href="{{url_for('main.new_comment',id=code.id)}}" class="btn btn-info"><i
-                        class="fas fa-clone left"></i> Comments</a>
             </div>
         </div>
     </div><br>
     {% endfor %}
-    {{ wtf.quick_form(code_form) }}
+    {{ wtf.quick_form(form) }}
 </div>
+
+
 {% endblock%}
