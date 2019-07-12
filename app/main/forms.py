@@ -26,4 +26,7 @@ class QuizForm(FlaskForm):
     Question = TextAreaField('question', validators=[Required()])
     submit = SubmitField('Submit')
 
+class AnswerForm(FlaskForm):
+    answer = TextAreaField('Answer',validators=[Required()])
+    submit = SubmitField('Submit')
 
